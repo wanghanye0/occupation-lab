@@ -18,6 +18,10 @@ programmer:
   icon: fas fa-code
   text: Programmer
 
+RA:
+  icon: fas fa-glasses
+  text: Research Assistant
+
 mascot:
   icon: fas fa-dog
   text: Mascot
