@@ -1,0 +1,47 @@
+{% assign emptyarray = "" | split: "," %}
+{% assign id = include.slug | default: include.id | default: "" %}
+{% assign posts = site.posts | default: emptyarray %}
+
+{% assign post = nil %}
+{% for p in posts %}
+  {% if p.type == "news" %}
+    {% assign post = p %}
+<div class="post_excerpt" >
+  {% assign content = post.content | default: "" %}
+  <div style="display: flex; flex-flow: column; width: 100%; margin-right: 20px; justify-content: center">
+    <div style="width: 100%;">
+      {%- if post.image -%}
+      {%- include photo.html image=post.image -%}
+      <!--<img src="{{include.image}}">-->
+      {% else -%}
+        {%- include photo.html image="images/background.jpg" -%}
+      {%- endif -%}
+    </div>
+    <div style="justify-content: center;display: flex;font-size: 20px; height: 100px; align-items: center;">
+      {% assign url = post.url | default: "" %}
+      {% assign title = post.title | default: "" %}
+      <p >
+        <a href="{{ url | relative_url }}" ><p style="word-wrap: break-word">{{ title }}</p></a>
+      </p>
+    </div>
+
+    <div style="width: 100%;justify-content: center;display: flex">
+      {%
+      include post-info.html
+      date=post.date
+      %}
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+  {% endif %}
+{% endfor %}
+
+

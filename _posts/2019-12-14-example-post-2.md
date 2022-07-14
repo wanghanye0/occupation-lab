@@ -1,5 +1,6 @@
 ---
 title: Example post 2
+type: event
 author: Felix Cited
 member: felix-cited
 ---

@@ -2,32 +2,15 @@
 title: Home
 ---
 
-# Your Lab Slogan
+[comment]: <> (# Your Lab Slogan)
 
-[Lab Website Template](https://github.com/greenelab/lab-website-template) is an easy-to-use, flexible website template for [labs](https://www.greenelab.com/), with automatic citations, GitHub tag imports, pre-built components, and more.
-Spend less time reinventing the wheel, and more time running your lab.
-
-{%
-  include link.html
-  type="github"
-  icon=""
-  text="See the template on GitHub"
-  link="greenelab/lab-website-template"
-  style="button"
-%}
-{%
-  include link.html
-  type="docs"
-  icon=""
-  text="See the documentation"
-  link="https://github.com/greenelab/lab-website-template/wiki"
-  style="button"
-%}
-{:.center}
+<h1>Hi! You are visiting Ocuupation Lab!!</h1>
+<h2>The website is still under construction!</h2>
+<h2>Welcome to all brilliant ideas!</h2>
 
 {% include section.html full=true %}
 
-{% include banner.html image="images/banner.jpg" %}
+{% include banner.html image="images/workers.jpg" %}
 
 {% include section.html %}
 
@@ -38,7 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 {%
-  include link.html
+  include simple-link.html
   link="research"
   text="See what we've published"
   icon="fas fa-arrow-right"
@@ -60,7 +43,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 {%
-  include link.html
+  include simple-link.html
   link="tools"
   text="Browse our tools"
   icon="fas fa-arrow-right"
@@ -71,7 +54,7 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/team.jpg"
   link="resources"
   title="Our Resources"
   flip=true
@@ -82,8 +65,8 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 {%
-  include link.html
-  link="team"
+  include simple-link.html
+  link="People"
   text="Meet our team"
   icon="fas fa-arrow-right"
   flip=true
@@ -93,7 +76,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/team.jpg"
   link="team"
   title="Our Team"
   text=text

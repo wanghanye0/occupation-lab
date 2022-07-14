@@ -1,0 +1,25 @@
+
+{%- if include.subsections -%}
+
+{%- assign tags = "" | split: "," -%}
+{%- assign input = include.subsections | join: "," | split: "," -%}
+{%- for tag in input -%}
+{%- assign tag = tag | strip -%}
+{%- if tag != "" -%}
+{%- assign tags = tags | push: tag -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- assign link = include.link | default: page.dir | absolute_url -%}
+
+{%- if tags.size > 0 -%}
+
+<div class="dropdown-content" style="height: 100px">
+    {%- for tag in tags -%}
+<!--    <p style="color: black">here {{tag}}</p>-->
+    <a href="#" style="height: 30px">{{- tag -}}</a>
+    {%- endfor -%}
+</div>
+{%- endif -%}
+
+{%- endif -%}

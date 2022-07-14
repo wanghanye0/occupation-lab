@@ -1,8 +1,9 @@
 ---
 title: Research
 nav:
-  order: 1
-  tooltip: Published works
+  order: 5
+  tooltip: 
+  subsections: 1, 2
 ---
 
 # <i class="fas fa-microscope"></i>Research

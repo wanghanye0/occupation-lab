@@ -1,7 +1,7 @@
 ---
 title: Support
 nav:
-  order: 5
+  order: 7
   tooltip: Donation
 ---
 

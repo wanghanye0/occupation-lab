@@ -1,7 +1,6 @@
 {%- assign type = include.type | default: "link" -%}
 {%- assign type = site.data.links[type] -%}
 {%- assign link = include.link -%}
-
 {%- if type and link -%}
 
   {%- assign icon = include.icon -%}
@@ -19,18 +18,18 @@
     {%- assign tooltip = type.tooltip -%}
   {%- endif -%}
 
+
   {%- assign link = type.link | replace: "$LINK", link -%}
 
   {%- assign flip = include.flip | default: false -%}
-
-  <a class="link" href="{{ link | relative_url }}" {% if tooltip %}data-tooltip="{{ tooltip }}"{% endif %} {% if icon %}data-icon="true"{% endif %} {% if text %}data-text="true"{% endif %} {% if flip %}data-flip="true"{% endif %} data-style="{{ include.style | default: '' }}">
-    {%- if icon contains "fa-" -%}
-      <i class="{{ icon }} fa-lg {% if text == nil %}fa-fw{% endif %}"></i>
-    {%- elsif icon -%}
-      {% include {{ icon }} %}
-    {%- endif -%}
+<div class="dropdown">
+<!--  <a class="link" href="{{ link | relative_url }}" {% if tooltip %}data-tooltip="{{ tooltip }}"{% endif %} {% if text %}data-text="true"{% endif %} {% if flip %}data-flip="true"{% endif %} data-style="{{ include.style | default: '' }}">-->
     {%- if text -%}
-      <span>{{ text }}</span>
+  <button class="dropbtn"><a href="{{ link | relative_url }}">{{ text }}</a></button>
+      {%- if include.subsections -%}
+      {% include subsections.html tags=include.subsections link="blog" subsections= include.subsections%}
+      {%- endif -%}
     {%- endif -%}
-  </a>
+<!--  </a>-->
+</div>
 {%- endif -%}
