@@ -2,7 +2,7 @@
 name: Sukie Xiuqi Yang
 image: images/SukieY.jpg
 description: PhD student in Sociology and Demography
-role: phd
+role: phd-student
 aliases:
   - X. Yang
   - S. Yang 

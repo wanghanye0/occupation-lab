@@ -2,7 +2,7 @@
 name: Michael Lachanski
 image: images/michael_lachanski.jpeg
 description: Researcher
-role: phd
+role: phd-candidate
 aliases:
   - 
 links:

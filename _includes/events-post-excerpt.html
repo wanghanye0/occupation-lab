@@ -6,9 +6,9 @@
 {% for p in posts %}
   {% if p.type == "event" %}
     {% assign post = p %}
-<div class="post_excerpt" >
+<div class="post_excerpt" style="margin-right: 0; padding: 2%; width: 33%;" >
   {% assign content = post.content | default: "" %}
-  <div style="display: flex; flex-flow: column; width: 100%; margin-right: 20px; justify-content: center">
+  <div style="display: flex; flex-flow: column; width: 100%; padding: 2%; justify-content: center">
     <div style="width: 100%;">
       {%- if post.image -%}
       {%- include photo.html image=post.image -%}

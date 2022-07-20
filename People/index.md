@@ -17,10 +17,16 @@ These researchers and collaborator empower Occupation Lab. We recognize and appr
   filters="role: pi"
 %}
 {%
+include list.html
+data="members"
+component="portrait"
+filters="role: phd-candidate"
+%}
+{%
   include list.html
   data="members"
   component="portrait"
-  filters="role: phd"
+  filters="role: phd-student"
 %}
 {%
 include list.html

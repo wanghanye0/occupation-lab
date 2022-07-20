@@ -1,0 +1,35 @@
+{%- assign type = include.type | default: "link" -%}
+{%- assign type = site.data.links[type] -%}
+{%- assign link = include.link -%}
+{%- if type and link -%}
+
+  {%- assign icon = include.icon -%}
+  {%- if icon == "" -%}
+    {%- assign icon = type.icon -%}
+  {%- endif -%}
+
+  {%- assign text = include.text -%}
+  {%- if text == "" -%}
+    {%- assign text = type.text -%}
+  {%- endif -%}
+
+  {%- assign tooltip = include.tooltip -%}
+  {%- if tooltip == "" -%}
+    {%- assign tooltip = type.tooltip -%}
+  {%- endif -%}
+
+
+  {%- assign link = type.link | replace: "$LINK", link -%}
+
+  {%- assign flip = include.flip | default: false -%}
+<div class="dropdown">
+<!--  <a class="link" href="{{ link | relative_url }}" {% if tooltip %}data-tooltip="{{ tooltip }}"{% endif %} {% if text %}data-text="true"{% endif %} {% if flip %}data-flip="true"{% endif %} data-style="{{ include.style | default: '' }}">-->
+    {%- if text -%}
+  <button class="dropbtn"><a href="{{ link | relative_url }}">{{ text }}</a></button>
+      {%- if include.subsections -%}
+      {% include subsections.html tags=include.subsections link="blog" subsections= include.subsections%}
+      {%- endif -%}
+    {%- endif -%}
+<!--  </a>-->
+</div>
+{%- endif -%}
